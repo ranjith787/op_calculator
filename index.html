@@ -1,0 +1,308 @@
+<html>
+<body>
+    <div class="container">
+        <form name="Calculator">
+            <div class="flx">
+                <input id="display" name="display" class="display" placeholder="">
+                <!-- BUTTONS -->
+                <input type="button" value="AC" class="itemAC" onclick="btnclear()">
+                <input type="button" class="itemC" value="C" onclick="btnclear()">
+                <input type="button" class="itemdiv" value="/" onclick="btndiv()" />
+                <input type="button" class="itemx" value="X" onclick="btnmult()" />
+
+                <input type="button" class="item7" value="7" onclick="document.Calculator.display.value += '7'" />
+                <input type="button" class="item8" value="8" onclick="document.Calculator.display.value += '8'" />
+                <input type="button" class="item9" value="9" onclick="document.Calculator.display.value += '9'" />
+                <input type="button" class="itemmin" value="-" onclick="btnsub()" />
+
+                <input type="button" class="item4" value="4" onclick="document.Calculator.display.value += '4'" />
+                <input type="button" class="item5" value="5" onclick="document.Calculator.display.value += '5'" />
+                <input type="button" class="item6" value="6" onclick="document.Calculator.display.value += '6'" />
+                <input type="button" class="itemplus" value="+" onclick="btnplus()" />
+
+                <input type="button" class="item1" value="1" onclick="document.Calculator.display.value += '1'" />
+                <input type="button" class="item2" value="2" onclick="document.Calculator.display.value += '2'" />
+                <input type="button" class="item3" value="3" onclick="document.Calculator.display.value += '3'" />
+                <input type="button" class="itemequ" value="=" onclick="document.Calculator.display.value = eval(document.Calculator.display.value)" />
+
+                <input type="button" class="item0" value="0" onclick="document.Calculator.display.value += '0'" />
+                <input type="button" class="itemdot" value="." onclick="document.Calculator.display.value += '.'" />
+            </div>
+        </form>
+    </div>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container {
+            display: felx;
+            border: 3px solid grey;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .flx {
+            display: grid;
+            padding: 0;
+            margin: 0;
+            background: black;
+            border:0;
+            grid-gap: 0;    
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas: 
+                "dis    dis     dis     dis" 
+                "ac     c       div     mul" 
+                "7      8       8        -"
+                "4      5       6        +" 
+                "1      2       3        =" 
+                "0      0       .        =";
+            justify-content: center;
+            
+        }
+
+        .display {
+            background: #181819;
+            grid-column: span 4;
+            color: white;
+            text-align: right;
+            font-size: 80px;
+            height: 230px;
+            flex-direction: column;
+            border: 0;
+        }
+
+        .itemAC {
+            font-size: 80px;
+            background: #262629;
+            color: white;
+            border: 0;
+        }
+
+        .itemC {
+            font-size: 80px;
+            background: #262629;
+            color: white;
+            border: 0;
+        }
+
+        .item0 {
+            grid-column: span 2;
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .itemequ {
+            grid-row: span 2;
+            font-size: 80px;
+            background: red;
+            color: white;
+            border: 0;
+        }
+
+        .item7 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item8 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item9 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item6 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item5 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item4 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item3 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item2 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .item1 {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .itemdot {
+            font-size: 80px;
+            background: black;
+            color: white;
+            border: 0;
+        }
+
+        .itemx {
+            font-size: 80px;
+            background: #262629;
+            color: white;
+            border: 0;
+        }
+
+        .itemmin {
+            font-size: 80px;
+            background: #262629;
+            color: white;
+            border: 0;
+        }
+
+        .itemplus {
+            font-size: 80px;
+            background: #262629;
+            color: white;
+            border: 0;
+        }
+
+        .itemdiv {
+            font-size: 80px;
+            background: #262629;
+            color: white;
+            border: 0;
+        }
+
+        .item1:hover {
+            background-color: grey;
+        }
+
+        .item2:hover {
+            background-color: grey;
+        }
+
+        .item3:hover {
+            background-color: grey;
+        }
+
+        .item4:hover {
+            background-color: grey;
+        }
+
+        .item5:hover {
+            background-color: grey;
+        }
+
+        .item6:hover {
+            background-color: grey;
+        }
+
+        .item7:hover {
+            background-color: grey;
+        }
+
+        .item8:hover {
+            background-color: grey;
+        }
+
+        .item9:hover {
+            background-color: grey;
+        }
+
+        .item0:hover {
+            background-color: grey;
+        }
+
+        .itemdot:hover {
+            background-color: grey;
+        }
+
+        .itemx:hover {
+            background-color: grey;
+        }
+
+        .itemplus:hover {
+            background-color: grey;
+        }
+
+        .itemmin:hover {
+            background-color: grey;
+        }
+
+        .itemdiv:hover {
+            background-color: grey;
+        }
+
+        .itemAC:hover {
+            background-color: red;
+        }
+        .itemC:hover {
+            background-color: grey;
+        }
+        .itemequ:hover {
+            background-color: grey;
+        }
+
+
+    </style>
+
+    <script>
+        function btnclear() {
+            document.Calculator.display.value = "";
+            document.Calculator.display.value.style.textAlign = "right";
+        }
+
+        function btnclearbefore() {
+
+        }
+
+        function btndiv() {
+            document.Calculator.display.value += "/";
+            document.Calculator.display.value.style.textAlign = "right";
+        }
+
+        function btnmult() {
+            document.Calculator.display.value += "*";
+            document.Calculator.display.value.style.textAlign = "right";
+        }
+
+        function btnsub() {
+            document.Calculator.display.value += "-";
+            document.Calculator.display.value.style.textAlign = "right";
+        }
+
+        function btnplus() {
+            document.Calculator.display.value += "+";
+            document.Calculator.display.value.style.textAlign = "right";
+        }
+    </script>
+</body> 
+</html>
